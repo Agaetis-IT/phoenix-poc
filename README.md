@@ -1,9 +1,14 @@
 # PhoenixPoc
 
+Quick MVC & REST POCs with Phoenix.
+
+Start server (see below) and go to `localhost:4000/tasks` to try the MVC one. 
+You can also look at the REST one on `/users` (note there's no frontend).
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
+  * Create and migrate your database with `mix ecto.setup` (you need postgreSQL, you can change connexion config in `config/dev.exs`)
   * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
 

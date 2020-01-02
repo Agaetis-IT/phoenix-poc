@@ -17,7 +17,7 @@ defmodule PhoenixPocWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-
+    
     get "/tasks", TaskController, :index
     get "/tasks/new", TaskController, :new
     post "/tasks", TaskController, :create
@@ -25,6 +25,9 @@ defmodule PhoenixPocWeb.Router do
     get "/tasks/:id/edit", TaskController, :edit
     put "/tasks/:id", TaskController, :update
     delete "/tasks/delete/:id", TaskController, :delete
+    # ^ the same in one line ===> resources "/tasks", TaskController
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
